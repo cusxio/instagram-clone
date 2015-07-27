@@ -20,12 +20,12 @@ angular.module('Instagram', ['ngRoute', 'ngMessages', 'satellizer'])
             })
             .otherwise('/');
 
-        $authProvider.loginUrl = 'http://localhost:8000/auth/login';
-        $authProvider.signupUrl = 'http://localhost:8000/auth/signup';
+        $authProvider.loginUrl = 'http://instagram-cusx.herokuapp.com/auth/login';
+        $authProvider.signupUrl = 'http://instagram-cusx.herokuapp.com/auth/signup';
         $authProvider.oauth2({
             name: 'instagram',
-            url: 'http://localhost:8000/auth/instagram',
-            redirectUri: 'http://localhost:3000',
+            url: 'http://instagram-cusx.herokuapp.com/auth/instagram',
+            redirectUri: 'http://iam.cusx.io/instagram-clone',
             clientId: '52b09bf559964e6fa3c04681db8af38a',
             requiredUrlParams: ['scope'],
             scope: ['likes'],
