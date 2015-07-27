@@ -3,13 +3,13 @@ angular.module('Instagram')
 
         return {
             getFeed: function() {
-                return $http.get('http://localhost:8000/api/feed');
+                return $http.get('http://instagram-cusx.herokuapp.com/api/feed');
             },
             getMediaById: function(id) {
-                return $http.get('http://localhost:8000/api/media/' + id);
+                return $http.get('http://instagram-cusx.herokuapp.com/api/media/' + id);
             },
             likeMedia: function(id) {
-                return $http.post('http://localhost:8000/api/like', {
+                return $http.post('http://instagram-cusx.herokuapp.com/api/like', {
                     mediaId: id
                 });
             }
